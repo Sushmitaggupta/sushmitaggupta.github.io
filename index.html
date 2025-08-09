@@ -4,95 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sushmita Gupta | Data Analyst Portfolio</title>
+    
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/D4A373/FFFFFF?text=SG">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: #FFFFFF;
-            color: #1A2E35;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            color: #1A2E35;
-        }
+        body { font-family: 'Lato', sans-serif; background-color: #FFFFFF; color: #1A2E35; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; color: #1A2E35; }
         .accent-color { color: #D4A373; }
         .bg-accent { background-color: #D4A373; }
         .border-accent { border-color: #D4A373; }
         .bg-light-gray { background-color: #F3F3F3; }
-
-        /* Profile image style for the About section */
-        .profile-image {
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        /* Initial state for entry animations */
-        .initial-hidden {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        /* Animation for elements fading in on scroll */
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Keyframes for hero text animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Apply animation to hero elements */
-        .hero-title {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        .hero-p {
-            animation: fadeInUp 0.8s ease-out 0.2s forwards;
-        }
-        .hero-socials {
-            animation: fadeInUp 0.8s ease-out 0.4s forwards;
-        }
+        .profile-image { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; }
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-title { animation: fadeInUp 0.8s ease-out forwards; }
+        .hero-p { animation: fadeInUp 0.8s ease-out 0.2s forwards; }
+        .hero-socials { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold">Data & Business Analyst</a>
+                    <a href="#" class="text-2xl font-bold">Sushmita Gupta</a>
                 </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
+                    <div class="ml-10 flex items-center space-x-4">
                         <a href="#about" class="text-gray-700 hover:accent-color px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
                         <a href="#projects" class="text-gray-700 hover:accent-color px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
                         <a href="#experience" class="text-gray-700 hover:accent-color px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#education" class="text-gray-700 hover:accent-color px-3 py-2 rounded-md text-sm font-medium transition-colors">Education</a>
                         <a href="#skills" class="text-gray-700 hover:accent-color px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#certifications" class="text-gray-700 hover:accent-color px-3 py-2 rounded-md text-sm font-medium transition-colors">Certifications</a>
+                        <a href="https://github.com/Sushmitaggupta/SushmitaGuptaAnalystCV" target="_blank" class="text-accent-color border border-accent hover:bg-accent hover:text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-300">View CV</a>
                         <a href="#contact" class="bg-accent text-white hover:bg-opacity-90 px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <!-- Mobile menu button -->
                     <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:bg-gray-200 focus:outline-none">
                         <span class="sr-only">Open main menu</span>
                         <i data-lucide="menu"></i>
@@ -100,25 +56,26 @@
                 </div>
             </div>
         </nav>
-        <!-- Mobile menu, show/hide based on menu state. -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#about" class="block text-gray-700 hover:accent-color px-3 py-2 rounded-md text-base font-medium">About</a>
                 <a href="#projects" class="block text-gray-700 hover:accent-color px-3 py-2 rounded-md text-base font-medium">Projects</a>
                 <a href="#experience" class="block text-gray-700 hover:accent-color px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#education" class="block text-gray-700 hover:accent-color px-3 py-2 rounded-md text-base font-medium">Education</a>
                 <a href="#skills" class="block text-gray-700 hover:accent-color px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#certifications" class="block text-gray-700 hover:accent-color px-3 py-2 rounded-md text-base font-medium">Certifications</a>
+                <a href="https://github.com/Sushmitaggupta/SushmitaGuptaAnalystCV" target="_blank" class="block text-gray-700 hover:accent-color px-3 py-2 rounded-md text-base font-medium">View CV</a>
                 <a href="#contact" class="block bg-accent text-white hover:bg-opacity-90 px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="py-20 md:py-32 bg-light-gray">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight initial-hidden hero-title">Transforming Raw Data into Actionable Insights</h1>
-                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-600 initial-hidden hero-p">A Data Analyst passionate about enabling innovation, risk reduction, and regulatory compliance through data-driven strategy and client-focused delivery.</p>
-                <div class="mt-8 flex justify-center space-x-4 initial-hidden hero-socials">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight hero-title">Transforming Raw Data into Actionable Insights</h1>
+                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-600 hero-p">A Data Analyst passionate about enabling innovation, risk reduction, and regulatory compliance through data-driven strategy and client-focused delivery.</p>
+                <div class="mt-8 flex justify-center space-x-4 hero-socials">
                     <a href="https://linkedin.com/in/sushmitaggupta" target="_blank" class="text-gray-500 hover:accent-color transition-transform duration-300 hover:scale-110"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
                     <a href="https://github.com/sushmitaggupta" target="_blank" class="text-gray-500 hover:accent-color transition-transform duration-300 hover:scale-110"><i data-lucide="github" class="w-6 h-6"></i></a>
                     <a href="mailto:sushmitaggupta@gmail.com" class="text-gray-500 hover:accent-color transition-transform duration-300 hover:scale-110"><i data-lucide="mail" class="w-6 h-6"></i></a>
@@ -126,79 +83,107 @@
             </div>
         </section>
 
-        <!-- About Me Section -->
         <section id="about" class="py-16 md:py-24 bg-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center -mt-32 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                    <img 
-                        src="https://gm-website-2025.s3.eu-north-1.amazonaws.com/sushmita_web/profile_pic.png" 
-                        alt="Sushmita Gupta Profile Picture" 
-                        class="profile-image mx-auto mb-6 border-4 border-accent shadow-lg"
-                        onerror="this.onerror=null;this.src='https://placehold.co/160x160/F3F3F3/1A2E35?text=SG';"
-                    >
+                    <img src="https://gm-website-2025.s3.eu-north-1.amazonaws.com/sushmita_web/profile_pic.png" alt="Sushmita Gupta Profile Picture" class="profile-image mx-auto mb-6 border-4 border-accent shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/160x160/F3F3F3/1A2E35?text=SG';">
                     <h2 class="text-3xl md:text-4xl font-bold">About Me</h2>
                     <p class="mt-2 text-lg accent-color font-semibold">Data Analyst & Strategist</p>
                     <div class="w-20 h-1 bg-accent/50 mx-auto mt-4 mb-6"></div>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        With 3+ years of experience, I have delivered data-driven digital transformation and strategy projects across logistics and financial services. I am adept in stakeholder engagement, Agile delivery, and cross-functional collaboration. My expertise lies in defining user stories, developing business cases, optimizing processes, and aligning business needs with technology solutions to drive business decisions.
-                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">With 3+ years of experience, I have delivered data-driven digital transformation and strategy projects across logistics and financial services. I am adept in stakeholder engagement, Agile delivery, and cross-functional collaboration. My expertise lies in defining user stories, developing business cases, optimizing processes, and aligning business needs with technology solutions to drive business decisions.</p>
                 </div>
             </div>
         </section>
-
-        <!-- Key Projects -->
+        
         <section id="projects" class="py-16 md:py-24 bg-light-gray">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold">Featured Stories & Projects</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">Here's a look at some of the impactful projects I've worked on.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold">Key Projects</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">A collection of my work, from data analysis and machine learning to interactive dashboards.</p>
                 </div>
-                <div class="mt-12 grid gap-10 md:grid-cols-1 lg:grid-cols-2">
-                    <!-- Project Card with Hover Effect -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold flex items-center gap-3">
-                                <i data-lucide="lightbulb" class="text-accent-color w-7 h-7"></i>
-                                Logistics Optimization for Sustainability
-                            </h3>
+                <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                        <img src="https://placehold.co/600x400/D4A373/FFFFFF?text=Logistics+Project" alt="Logistics Optimization Project Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Logistics Optimization for Sustainability</h3>
                             <p class="mt-2 text-sm accent-color font-semibold">MSc Final Year Project</p>
-                            <p class="mt-4 text-gray-600">Developed a logistics route optimization model using ML techniques, leading to a potential <strong class="text-gray-800">97% reduction in carbon emissions</strong>. Conducted EDA and data preprocessing on 42,000 UPS locations to enhance sustainability and renewable energy in last-mile delivery.</p>
-                            <div class="mt-6 flex flex-wrap gap-2">
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Power BI</span>
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                            <p class="mt-4 text-gray-600 flex-grow">Developed an ML model to optimize routes, achieving a potential 97% reduction in carbon emissions by analyzing 42,000 UPS locations.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Power BI</span>
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                            </div>
+                            <div class="mt-6 flex items-center gap-4">
+                                <a href="https://github.com/Sushmitaggupta/Final-Year-Project/raw/main/MSc_Research_Project_x22219455.pdf" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View Report <i data-lucide="file-text" class="w-4 h-4"></i></a>
+                                <a href="https://github.com/Sushmitaggupta/Final-Year-Project" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View on GitHub <i data-lucide="github" class="w-4 h-4"></i></a>
                             </div>
                         </div>
                     </div>
-                    <!-- Project Card with Hover Effect -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold flex items-center gap-3">
-                                <i data-lucide="clapperboard" class="text-accent-color w-7 h-7"></i>
-                                Netflix Performance Dashboard
-                            </h3>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                        <img src="https://placehold.co/600x400/1A2E35/FFFFFF?text=Netflix+Dashboard" alt="Netflix Dashboard Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Netflix Performance Dashboard</h3>
                             <p class="mt-2 text-sm accent-color font-semibold">Academic Project</p>
-                            <p class="mt-4 text-gray-600">Developed a comprehensive dashboard to visualize financial metrics, utilizing Excel and Power Query for data cleaning and preparation. Presented insights to a diverse audience, enabling data-driven discussions on content strategy and performance.</p>
-                            <div class="mt-6 flex flex-wrap gap-2">
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Power BI</span>
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Advanced Excel</span>
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">SQL</span>
+                            <p class="mt-4 text-gray-600 flex-grow">Developed a dashboard to visualize financial metrics utilizing Excel and Power Query for data cleaning and preparation. Presented insights to a diverse audience, receiving positive feedback for clear communication.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Power BI</span>
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Advanced Excel</span>
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
+                            </div>
+                            <div class="mt-6 flex items-center gap-4">
+                                <a href="https://github.com/Sushmitaggupta/Netflix-dashboard/raw/main/Netflix%20Dashboard.pdf" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View Report <i data-lucide="file-text" class="w-4 h-4"></i></a>
+                                <a href="https://github.com/Sushmitaggupta/Netflix-dashboard" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View on GitHub <i data-lucide="github" class="w-4 h-4"></i></a>
                             </div>
                         </div>
                     </div>
-                     <!-- Project Card with Hover Effect -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-section lg:col-span-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold flex items-center gap-3">
-                                <i data-lucide="shopping-cart" class="text-accent-color w-7 h-7"></i>
-                                Spar Deli Sales & Waste Analysis
-                            </h3>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                        <img src="https://placehold.co/600x400/D4A373/FFFFFF?text=Spar+Analysis" alt="Spar Sales Analysis Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Spar Deli Sales & Waste Analysis</h3>
                             <p class="mt-2 text-sm accent-color font-semibold">Personal Project</p>
-                            <p class="mt-4 text-gray-600">Created a dataset based on real-world operations to analyze daily sales, production, and waste trends. Developed a Power BI dashboard with advanced DAX to identify cost-saving opportunities and waste management strategies.</p>
-                            <div class="mt-6 flex flex-wrap gap-2">
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Power BI</span>
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Python</span>
-                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">DAX</span>
+                            <p class="mt-4 text-gray-600 flex-grow">Created a dataset based on real-world operations to analyze daily sales and waste trends to identify cost-saving and waste management strategies.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Power BI</span>
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">DAX</span>
+                            </div>
+                            <div class="mt-6 flex items-center gap-4">
+                                <a href="https://github.com/Sushmitaggupta/Spar-Deli-Dashboard" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View on GitHub <i data-lucide="github" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                        <img src="https://placehold.co/600x400/1A2E35/FFFFFF?text=Global+Sales" alt="Global Sales Dashboard Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Global Sales Dashboard</h3>
+                            <p class="mt-2 text-sm accent-color font-semibold">Personal Project</p>
+                            <p class="mt-4 text-gray-600 flex-grow">An interactive Power BI dashboard analyzing global sales data across various regions and product categories.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Power BI</span>
+                            </div>
+                            <div class="mt-6 flex items-center gap-4">
+                                <a href="https://github.com/Sushmitaggupta/PowerBI/raw/main/GlobalSales.pdf" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View Report <i data-lucide="file-text" class="w-4 h-4"></i></a>
+                                <a href="https://github.com/Sushmitaggupta/PowerBI" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View on GitHub <i data-lucide="github" class="w-4 h-4"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in-section transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+                        <img src="https://placehold.co/600x400/D4A373/FFFFFF?text=Walmart+Sales" alt="Walmart Sales Dashboard Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold">Walmart Sales Analysis</h3>
+                            <p class="mt-2 text-sm accent-color font-semibold">Personal Project</p>
+                            <p class="mt-4 text-gray-600 flex-grow">A detailed dashboard visualizing Walmart's sales data to uncover trends in customer behavior and product performance.</p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Power BI</span>
+                            </div>
+                            <div class="mt-6 flex items-center gap-4">
+                                <a href="https://github.com/Sushmitaggupta/PowerBI/raw/main/WALMART%20SALES.pdf" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View Report <i data-lucide="file-text" class="w-4 h-4"></i></a>
+                                <a href="https://github.com/Sushmitaggupta/PowerBI" target="_blank" class="font-semibold text-gray-700 hover:accent-color transition-colors flex items-center gap-2">View on GitHub <i data-lucide="github" class="w-4 h-4"></i></a>
                             </div>
                         </div>
                     </div>
@@ -206,7 +191,6 @@
             </div>
         </section>
 
-        <!-- Professional Experience -->
         <section id="experience" class="py-16 md:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
@@ -214,99 +198,127 @@
                     <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
                 </div>
                 <div class="mt-12 relative border-l-2 border-accent/20 ml-4 md:ml-0 pl-10">
-                    <!-- Experience 1 -->
+                    
                     <div class="fade-in-section relative mb-12">
                         <div class="absolute -left-[49px] top-1 w-6 h-6 bg-accent rounded-full border-4 border-white"></div>
-                        <h3 class="text-xl font-bold">DTDC Express Limited</h3>
-                        <p class="text-gray-600 text-sm">July 2022 - August 2023</p>
-                        <h4 class="text-lg font-bold mt-2">Data Analyst</h4>
-                        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-2">
-                            <li>Designed Tableau dashboards, improving team efficiency by 30%.</li>
-                            <li>Collaborated with cross-functional teams, improving customer satisfaction by 20%.</li>
-                            <li>Managed key accounts, increasing revenue by 15% and customer experience by 10%.</li>
-                            <li>Supported end-to-end SAP SuccessFactors implementations.</li>
+                        <h3 class="text-xl font-bold">Data Analyst</h3>
+                        <p class="text-gray-600 text-sm">DTDC Express Limited, Mumbai, India | July 2022 - Aug 2023</p>
+                        <p class="mt-2 text-gray-500 italic">A leading logistics company providing courier services.</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                            <li>Designed and built metrics, interactive reports and dashboards using Tableau to track performance, reducing manual tracking efforts by 30%.</li>
+                            <li>Collaborated with cross-functional teams (Technical Operations, Sales, CRM) to analyse trends and deliver actionable insights, contributing to a 20% improvement in customer satisfaction.</li>
+                            <li>Managed key accounts, increasing revenue by 15% and customer experience by 10% by identifying service bottlenecks.</li>
+                            <li>Performed ad-hoc data analysis for a critical live project with Futwork, contributing to a 25% increase in service provider value.</li>
+                            <li>Documented user stories, tested outputs, and supported full Agile lifecycle delivery including design, testing, and deployment phases.</li>
                         </ul>
                     </div>
-                    <!-- Experience 2 -->
+                    
+                    <div class="fade-in-section relative mb-12">
+                        <div class="absolute -left-[49px] top-1 w-6 h-6 bg-accent rounded-full border-4 border-white"></div>
+                        <h3 class="text-xl font-bold">Data Analyst</h3>
+                        <p class="text-gray-600 text-sm">TSS Consultancy Pvt Ltd, Mumbai, India | June 2021 - May 2022</p>
+                        <p class="mt-2 text-gray-500 italic">A leading technology solutions company focused on fighting financial crime.</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                            <li>Engineered data validation workflows using Python and SQL, processing 500,000+ AML records monthly.</li>
+                            <li>Collaborated with clients to translate business objectives into data-driven solutions, enhancing reporting accuracy by 60%.</li>
+                            <li>Collaborated in Agile sprints, prioritized product backlogs, and performed UAT for data validation processes.</li>
+                            <li>Delivered insights that enhanced fraud detection compliance and improved regulatory reporting speed by 60%.</li>
+                        </ul>
+                    </div>
+
                     <div class="fade-in-section relative">
                         <div class="absolute -left-[49px] top-1 w-6 h-6 bg-accent rounded-full border-4 border-white"></div>
-                        <h3 class="text-xl font-bold">TSS Consultancy Pvt Ltd</h3>
-                        <p class="text-gray-600 text-sm">June 2021 - May 2022</p>
-                        <h4 class="text-lg font-bold mt-2">Data Analyst</h4>
-                        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-2">
-                            <li>Engineered data validation workflows, processing 500,000+ AML records monthly.</li>
-                            <li>Enhanced reporting accuracy by 60% and regulatory reporting speed by 60%.</li>
-                            <li>Automated tasks with Python and Excel macros, reducing manual effort by 40%.</li>
+                        <h3 class="text-xl font-bold">Data Analyst Intern</h3>
+                        <p class="text-gray-600 text-sm">Ajay Vijay Knit Industries, Mumbai, India | April 2020 - May 2021</p>
+                        <p class="mt-2 text-gray-500 italic">A textile manufacturing company specializing in high-quality knitted fabrics and apparel.</p>
+                        <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+                            <li>Supported process optimization projects across production and supply chain systems using Excel and Google Sheets.</li>
+                            <li>Developed dashboards using Advanced Excel to monitor inventory, vendor performance, and quality metrics.</li>
+                            <li>Mapped current-state to future-state processes, reducing waste and improving data transparency.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
+        
+        <section id="education" class="py-16 md:py-24 bg-light-gray">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold">Education</h2>
+                    <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
+                </div>
+                <div class="mt-12 relative border-l-2 border-accent/20 ml-4 md:ml-0 pl-10">
+                    <div class="fade-in-section relative mb-12">
+                        <div class="absolute -left-[49px] top-1 w-6 h-6 bg-accent rounded-full border-4 border-white"></div>
+                        <h3 class="text-xl font-bold">Master of Science in Data Analytics (2:1)</h3>
+                        <p class="text-gray-600 text-sm">Sep 2023 – Aug 2024</p>
+                        <h4 class="text-lg font-semibold mt-2">National College of Ireland, Dublin</h4>
+                        <p class="mt-2 text-gray-700"><strong>Modules:</strong> Business Intelligence & Business Analysis, Predictive Data Analytics, Data Mining & Machine Learning, Database & Analytics Programming, Data Modelling, Simulation & Optimisation, Forecasting, Statistical Models & Mathematics.</p>
+                    </div>
+                    <div class="fade-in-section relative">
+                        <div class="absolute -left-[49px] top-1 w-6 h-6 bg-accent rounded-full border-4 border-white"></div>
+                        <h3 class="text-xl font-bold">Bachelor of Computer Science Engineering (1:1)</h3>
+                        <p class="text-gray-600 text-sm">Aug 2018 – June 2022</p>
+                        <h4 class="text-lg font-semibold mt-2">Vidyalankar Institute of Technology, India</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Technical Skills -->
-        <section id="skills" class="py-16 md:py-24 bg-light-gray">
+        <section id="skills" class="py-16 md:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h2 class="text-3xl md:text-4xl font-bold">Technical Skills</h2>
                     <p class="mt-4 max-w-2xl mx-auto text-gray-600">A selection of tools and technologies I work with.</p>
                 </div>
-                <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
-                    <!-- Skill Icon with Hover Effect -->
-                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                        <i data-lucide="bar-chart-big" class="w-10 h-10 accent-color"></i>
-                        <p class="font-bold">Power BI (DAX)</p>
-                    </div>
-                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                         <i data-lucide="area-chart" class="w-10 h-10 accent-color"></i>
-                        <p class="font-bold">Tableau</p>
-                    </div>
-                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                        <i data-lucide="code-2" class="w-10 h-10 accent-color"></i>
-                        <p class="font-bold">Python</p>
-                    </div>
-                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                        <i data-lucide="database" class="w-10 h-10 accent-color"></i>
-                        <p class="font-bold">SQL</p>
-                    </div>
-                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                        <i data-lucide="cloud" class="w-10 h-10 accent-color"></i>
-                        <p class="font-bold">Microsoft Azure</p>
-                    </div>
-                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                        <i data-lucide="cloud-cog" class="w-10 h-10 accent-color"></i>
-                        <p class="font-bold">AWS</p>
-                    </div>
-                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                        <i data-lucide="gem" class="w-10 h-10 accent-color"></i>
-                        <p class="font-bold">SAP</p>
-                    </div>
-                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110">
-                        <i data-lucide="file-spreadsheet" class="w-10 h-10 accent-color"></i>
-                        <p class="font-bold">Advanced Excel</p>
-                    </div>
+                <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
+                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110"><i data-lucide="bar-chart-big" class="w-10 h-10 accent-color"></i><p class="font-bold">Power BI (DAX)</p></div>
+                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110"><i data-lucide="area-chart" class="w-10 h-10 accent-color"></i><p class="font-bold">Tableau</p></div>
+                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110"><i data-lucide="code-2" class="w-10 h-10 accent-color"></i><p class="font-bold">Python</p></div>
+                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110"><i data-lucide="database" class="w-10 h-10 accent-color"></i><p class="font-bold">SQL</p></div>
+                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110"><i data-lucide="cloud" class="w-10 h-10 accent-color"></i><p class="font-bold">Microsoft Azure</p></div>
+                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110"><i data-lucide="cloud-cog" class="w-10 h-10 accent-color"></i><p class="font-bold">AWS</p></div>
+                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110"><i data-lucide="gem" class="w-10 h-10 accent-color"></i><p class="font-bold">SAP</p></div>
+                    <div class="fade-in-section flex flex-col items-center gap-2 transition-transform duration-300 hover:scale-110"><i data-lucide="file-spreadsheet" class="w-10 h-10 accent-color"></i><p class="font-bold">Advanced Excel</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <section id="certifications" class="py-16 md:py-24 bg-light-gray">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <a href="https://github.com/Sushmitaggupta/Certificates" target="_blank" class="text-3xl md:text-4xl font-bold inline-flex items-center gap-3 group">
+                        Certifications & Credentials 
+                        <i data-lucide="arrow-right" class="w-7 h-7 transition-transform group-hover:translate-x-2"></i>
+                    </a>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">A list of my professional certifications and completed training programs.</p>
+                </div>
+                <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-section"><h3 class="font-bold text-lg">SAP SuccessFactors Employee Central (Beginner to Guru)</h3><p class="text-sm text-gray-500 mt-1">April 2025</p></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-section"><h3 class="font-bold text-lg">Agile Fundamentals: Including Scrum & Kanban</h3><p class="text-sm text-gray-500 mt-1">April 2025</p></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-section"><h3 class="font-bold text-lg">Google Business Intelligence Professional Certificate</h3><p class="text-sm text-gray-500 mt-1">In Progress</p></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-section"><h3 class="font-bold text-lg">Accenture North America Data Analytics Job Simulation</h3><p class="text-sm text-gray-500 mt-1">September 2024</p></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-section"><h3 class="font-bold text-lg">PwC Power BI in Data Analytics Virtual Case Experience</h3><p class="text-sm text-gray-500 mt-1">September 2022</p></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md fade-in-section"><h3 class="font-bold text-lg">Microsoft Excel from Beginner to Advanced (Udemy)</h3><p class="text-sm text-gray-500 mt-1">August 2022</p></div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="py-16 md:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold">Get In Touch</h2>
                 <p class="mt-4 text-lg text-gray-600">I'm currently seeking new opportunities. Feel free to reach out!</p>
                 <div class="mt-8">
-                    <a href="mailto:sushmitaggupta@gmail.com" class="inline-block bg-accent text-white text-lg font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                        Contact Me
-                    </a>
+                    <a href="mailto:sushmitaggupta@gmail.com" class="inline-block bg-accent text-white text-lg font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">Contact Me</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <p>&copy; 2024 Sushmita Gupta. All Rights Reserved.</p>
+                <p>&copy; 2025 Sushmita Gupta. All Rights Reserved.</p>
                 <div class="flex space-x-6">
                     <a href="https://linkedin.com/in/sushmitaggupta" target="_blank" class="hover:text-accent-color transition-colors"><i data-lucide="linkedin"></i></a>
                     <a href="https://github.com/sushmitaggupta" target="_blank" class="hover:text-accent-color transition-colors"><i data-lucide="github"></i></a>
@@ -317,40 +329,19 @@
     </footer>
 
     <script>
-        // Lucide Icons
         lucide.createIcons();
-
-        // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = document.querySelectorAll('#mobile-menu a');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Fade-in on scroll animation
+        const navLinks = document.querySelectorAll('#mobile-menu a, .hidden.md\\:block a');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        navLinks.forEach(link => { link.addEventListener('click', () => { if (!mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); } }); });
         const sections = document.querySelectorAll('.fade-in-section');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
+                if (entry.isIntersecting) { entry.target.classList.add('is-visible'); }
             });
-        }, {
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
+        }, { threshold: 0.1 });
+        sections.forEach(section => { observer.observe(section); });
     </script>
 
 </body>
